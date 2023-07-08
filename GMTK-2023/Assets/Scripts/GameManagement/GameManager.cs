@@ -16,6 +16,8 @@ namespace Runtime.GameManagement
 		private Camera _mainCamera = null;
 		public Camera MainCamera => GetMainCamera();
 
+		private PlayerInstance _player1 = null;
+		private PlayerInstance _player2 = null;
 
 		public bool IsLobbyReady = false;
 
@@ -26,6 +28,15 @@ namespace Runtime.GameManagement
 
 		private void OnPlayerJoined(PlayerInput obj)
 		{
+			if(_player1 == null)
+			{
+				_player1 = obj.GetComponent<PlayerInstance>();
+			}
+			else
+			{
+				_player2 = obj.GetComponent<PlayerInstance>();
+			}
+
 			if (_playerInputManager.playerCount != 2)
 				return;
 
@@ -35,12 +46,8 @@ namespace Runtime.GameManagement
 
 		public void StartGame()
 		{
-
-		}
-
-		public void StartRound()
-		{
-
+			_player1.CreateHumanEntity();
+			_player2.CreateHumanEntity();
 		}
 
 		private Camera GetMainCamera()
