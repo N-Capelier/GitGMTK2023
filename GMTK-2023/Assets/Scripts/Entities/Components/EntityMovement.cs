@@ -30,7 +30,8 @@ namespace Runtime.Entities.Components
 
 		private void OnMovementInputChanged(Vector2 input)
 		{
-			_rigidbody.AddForce(new Vector3(input.x, 0f, input.y) * _moveSpeed, ForceMode.VelocityChange);
+			//_rigidbody.AddForce(new Vector3(input.x, 0f, input.y) * _moveSpeed, ForceMode.VelocityChange);
+			transform.Translate(new Vector3(input.x, 0f, input.y) * _moveSpeed);
 		}
 	}
 }
