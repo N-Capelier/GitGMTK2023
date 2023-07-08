@@ -14,13 +14,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Human
+  - Boss
   - EntityItem
   - HumanItem
   - BossItem
-  - 
-  - 
+  - Destroyable
+  - Wall
   - 
   - 
   - 
