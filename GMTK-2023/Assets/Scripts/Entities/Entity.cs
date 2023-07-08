@@ -12,13 +12,14 @@ namespace Runtime.Entities
         public PlayerInstance Owner = null;
 
         [Header("References")]
-        [SerializeField]
-        private EntityMovement _movement = null;
+        public EntityMovement Movement = null;
+        public EntityAim Aim = null;
+        public EntityInteraction Interaction = null;
 
         public virtual void Initialize(PlayerInstance owner)
         {
             Owner = owner;
-            _movement.Initialize(this);
+            Movement.Initialize(this);
         }
     }
 }
