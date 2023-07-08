@@ -71,8 +71,6 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 0720e4ff06c190e42ba0b015f3cf7c6d, type: 3}
   - Name: Powerup3
     Clip: {fileID: 8300000, guid: e42cdeb0468abd44cad9f7052e36655b, type: 3}
-  - Name: Powerup3
-    Clip: {fileID: 8300000, guid: e42cdeb0468abd44cad9f7052e36655b, type: 3}
   - Name: RockCrush
     Clip: {fileID: 8300000, guid: 2f588c9ae7694884796e1048c87c656c, type: 3}
   - Name: Shot1
