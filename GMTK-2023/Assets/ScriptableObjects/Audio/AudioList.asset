@@ -12,4 +12,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e05c65f28434149a77fdb64bd2dccc, type: 3}
   m_Name: AudioList
   m_EditorClassIdentifier: 
-  AudioData: []
+  AudioData:
+  - Name: crush1
+    Clip: {fileID: 8300000, guid: c08a6330f2d686748823f02bacde5b55, type: 3}
+  - Name: DragonFireball1
+    Clip: {fileID: 8300000, guid: ad2003f1478e94341a717d59441e5384, type: 3}
+  - Name: DragonFireball2
+    Clip: {fileID: 8300000, guid: a3a9bdc03302c39479e1f63f47dc66c1, type: 3}
+  - Name: DragonFireballBreath
+    Clip: {fileID: 8300000, guid: dc5d2e4e752dc894b8904b75959dc41d, type: 3}
+  - Name: DragonHitCrush
+    Clip: {fileID: 8300000, guid: f0b5a47a5f896f34bbd7af6393ea8aab, type: 3}
+  - Name: DragonSound1
+    Clip: {fileID: 8300000, guid: b294df0ce5fb45847a3dd7a70c5229b9, type: 3}
+  - Name: DragonSound2
+    Clip: {fileID: 8300000, guid: 7f7384a5e6457f441a58c558d5a77b71, type: 3}
+  - Name: DragonSound3
+    Clip: {fileID: 8300000, guid: 8a90adba20df72144a8a4a2e6ab87423, type: 3}
+  - Name: DragonSound4
+    Clip: {fileID: 8300000, guid: 84edfafaffb8e054391b3555af3c2a20, type: 3}
+  - Name: DragonSound5
+    Clip: {fileID: 8300000, guid: 31118263a2ff3da4b94c5db56a631037, type: 3}
+  - Name: ExcaliburHit
+    Clip: {fileID: 8300000, guid: f3cef8b223224ec4495c24c987dccf7d, type: 3}
+  - Name: ExcaliburSpawn
+    Clip: {fileID: 8300000, guid: 7b15279afe34eed49b8e55899403a534, type: 3}
+  - Name: explosion
+    Clip: {fileID: 8300000, guid: 76f2470d7d75c094e84032c6785e2dbe, type: 3}
+  - Name: grassBurning
+    Clip: {fileID: 8300000, guid: d770629594b9cbd46ba9013906083b70, type: 3}
+  - Name: HeartBeat
+    Clip: {fileID: 8300000, guid: a09c335b56f0c674d9b89be90c0dfaad, type: 3}
+  - Name: HitDefaultImpact
+    Clip: {fileID: 8300000, guid: 9b41c4993fdc2484687efe7dab1bcb29, type: 3}
+  - Name: Human1
+    Clip: {fileID: 8300000, guid: f7dd57f55dd35964ab497078c794e193, type: 3}
+  - Name: Human2
+    Clip: {fileID: 8300000, guid: 1e211824f7e83f6498c7455d7fd1e55f, type: 3}
+  - Name: Human3
+    Clip: {fileID: 8300000, guid: ebfff907c7b40af4ab9059981df7023d, type: 3}
+  - Name: Human4
+    Clip: {fileID: 8300000, guid: bcd0e6a7c368b4641872023520ad679b, type: 3}
+  - Name: Human5
+    Clip: {fileID: 8300000, guid: 3eafad9894cdea944bb7ff06ad2651cb, type: 3}
+  - Name: HumanFootstep1
+    Clip: {fileID: 8300000, guid: c129abd57292319498b2bd95f18d8603, type: 3}
+  - Name: HumanFootstep2
+    Clip: {fileID: 8300000, guid: dd001be307a097f4ab6fc0c62fa081dc, type: 3}
+  - Name: MoneyRain
+    Clip: {fileID: 8300000, guid: 82cab8479a0ee1548b39cc307f4c4b70, type: 3}
+  - Name: Pop1
+    Clip: {fileID: 8300000, guid: 975ab9eb183e8634fba12f41c0c395aa, type: 3}
+  - Name: Pop2
+    Clip: {fileID: 8300000, guid: c5d537f74f0630d44930405ae0a67f57, type: 3}
+  - Name: Powerup1
+    Clip: {fileID: 8300000, guid: 9e8d522e78234dd41b1bcc5db20bf647, type: 3}
+  - Name: Powerup2
+    Clip: {fileID: 8300000, guid: 0720e4ff06c190e42ba0b015f3cf7c6d, type: 3}
+  - Name: Powerup3
+    Clip: {fileID: 8300000, guid: e42cdeb0468abd44cad9f7052e36655b, type: 3}
+  - Name: Powerup3
+    Clip: {fileID: 8300000, guid: e42cdeb0468abd44cad9f7052e36655b, type: 3}
+  - Name: RockCrush
+    Clip: {fileID: 8300000, guid: 2f588c9ae7694884796e1048c87c656c, type: 3}
+  - Name: Shot1
+    Clip: {fileID: 8300000, guid: daa6abf16fdf3c9488560b07d4e518c1, type: 3}
+  - Name: Shot2
+    Clip: {fileID: 8300000, guid: 0720e4ff06c190e42ba0b015f3cf7c6d, type: 3}
+  - Name: Shot3
+    Clip: {fileID: 8300000, guid: 4caa7450bfb62234782f74551f22b54f, type: 3}
+  - Name: swoosh1
+    Clip: {fileID: 8300000, guid: 51c0d50ae8e2c454b97619c9b2382c07, type: 3}
+  - Name: Transformation
+    Clip: {fileID: 8300000, guid: c89b238c87cc0064b8efa0477cc397a5, type: 3}
+  - Name: weaponPickup1
+    Clip: {fileID: 8300000, guid: dc2fefd97e4f05c45b55be5512d09b42, type: 3}
+  - Name: weaponPickup2
+    Clip: {fileID: 8300000, guid: 3b2139be2564de94e921007e8b299d50, type: 3}
+  - Name: weaponPickup3
+    Clip: {fileID: 8300000, guid: 769e802190ee708458ba736d568942d3, type: 3}
