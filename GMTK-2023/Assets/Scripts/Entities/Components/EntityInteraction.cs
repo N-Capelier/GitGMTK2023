@@ -1,5 +1,6 @@
 using Runtime.Weapons;
 using UnityEngine;
+using Runtime.Audio;
 
 namespace Runtime.Entities.Components
 {
@@ -31,10 +32,16 @@ namespace Runtime.Entities.Components
 			if (Physics.Raycast(_entity.transform.position, -_entity.transform.up, out RaycastHit hitInfo, 10f, _entityLayerMask))
 			{
 				_entity.Aim.SetWeapon(hitInfo.collider.GetComponent<WeaponItem>().GetWeapon());
+				//MANAGE SFX
+				int randomID = Random.Range(1, 4);
+				AudioManager.Instance.PlayAudio("WeaponPickup" + randomID);
 			}
 			else if (Physics.Raycast(_entity.transform.position, -_entity.transform.up, out hitInfo, 10f, _itemLayerMask))
 			{
 				_entity.Aim.SetWeapon(hitInfo.collider.GetComponent<WeaponItem>().GetWeapon());
+				//MANAGE SFX
+				int randomID = Random.Range(1, 4);
+				AudioManager.Instance.PlayAudio("WeaponPickup" + randomID);
 			}
 		}
 	}
