@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Runtime.Audio;
 
 namespace Runtime
 {
@@ -11,6 +12,7 @@ namespace Runtime
         public float cooldownValue;
         private int currentHp;
         public int maxHp;
+        public GameObject stoneParticules;
 
 
         private void Awake()
@@ -20,8 +22,9 @@ namespace Runtime
         }
         private void Update()
         {
-            if (currentHp <= 0 && isDestroyed == false)
+            if (currentHp <= 0 && isDestroyed == false || Input.GetKeyDown("space"))
             {
+                Debug.Log("space");
                 DestroyStone();
             }
             else if (isDestroyed == true && rebuiltCooldown > 0)
@@ -56,6 +59,8 @@ namespace Runtime
             gameObject.GetComponent<BoxCollider>().enabled = false;
             //Change anim to destroyed anim
             //SFX + FX
+            AudioManager.Instance.PlayAudio("RockCrush", false);
+            Instantiate(stoneParticules, gameObject.transform.position, Quaternion.identity);
         }
 
         private void RebuildStone()
