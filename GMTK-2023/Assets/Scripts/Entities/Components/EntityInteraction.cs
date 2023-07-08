@@ -12,18 +12,18 @@ namespace Runtime.Entities.Components
 		[SerializeField]
 		LayerMask _itemLayerMask = default;
 
-		static LayerMask _entityLayerMask = LayerMask.NameToLayer("EntityItem");
+		private LayerMask _entityLayerMask;
+
+		private void Start()
+		{
+			_entityLayerMask = LayerMask.NameToLayer("EntityItem");
+		}
 
 		public void Initialize(Entity entity)
         {
 			_entity = entity;
 
 			_entity.Owner.InputManager.OnInteract += Interact;
-		}
-
-		private void OnDestroy()
-		{
-			_entity.Owner.InputManager.OnInteract -= Interact;
 		}
 
 		private void Interact()
