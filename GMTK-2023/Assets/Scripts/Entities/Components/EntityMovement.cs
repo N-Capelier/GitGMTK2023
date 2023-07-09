@@ -13,8 +13,7 @@ namespace Runtime.Entities.Components
         private float _moveSpeed = 5f;
 
 		[Header("References")]
-		[SerializeField]
-		private Rigidbody _rigidbody;
+		public Rigidbody _rigidbody;
 
 
 
@@ -30,19 +29,10 @@ namespace Runtime.Entities.Components
 			_entity.Owner.InputManager.OnMovementInputChanged -= OnMovementInputChanged;
 		}
 
-		private void OnDestroy()
-		{
-			_entity.Owner.InputManager.OnMovementInputChanged -= OnMovementInputChanged;
-		}
-
         private void OnMovementInputChanged(Vector2 input)
 		{
-			//_rigidbody.AddForce(new Vector3(input.x, 0f, input.y) * _moveSpeed, ForceMode.VelocityChange);
-
-			if (input.magnitude != 0)
-            {
-				transform.Translate(new Vector3(input.x, 0f, input.y) * _moveSpeed);
-			}
+				//transform.Translate(new Vector3(input.x, 0f, input.y) * _moveSpeed);
+				_rigidbody.velocity = (new Vector3(input.x, 0f, input.y) * _moveSpeed);
 		}
 	}
 }

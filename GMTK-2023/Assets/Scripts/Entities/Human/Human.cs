@@ -24,17 +24,16 @@ namespace Runtime.Entities
 			_particule_walkDust.Stop();
 		}
 
-		private void OnMovementInputChangedFeedbacks(Vector2 input)
-		{
-			if(input.magnitude > 0.2)
+        public void FixedUpdate()
+        {
+           if(Movement._rigidbody.velocity.magnitude > 0.2f && _particule_walkDust.isPlaying == false)
             {
 				_particule_walkDust.Play();
-			}
-            else
+            }
+            else if (Movement._rigidbody.velocity.magnitude < 0.2f && _particule_walkDust.isPlaying == true)
             {
 				_particule_walkDust.Stop();
 			}
-	
-		}
+        }
 	}
 }
