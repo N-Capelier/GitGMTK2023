@@ -1,5 +1,4 @@
 using Runtime.Entities;
-using Runtime.LevelManagement;
 using UnityEngine;
 
 namespace Runtime.Player
@@ -7,6 +6,7 @@ namespace Runtime.Player
     public class PlayerInstance : MonoBehaviour
     {
         private Entity _entity = null;
+        public Entity CurrentEntity => _entity;
 
         [Header("References")]
         [SerializeField]
@@ -18,32 +18,32 @@ namespace Runtime.Player
         private PlayerInputManager _inputManager = null;
         public PlayerInputManager InputManager => _inputManager;
 
-        [ContextMenu("Create Human Entity")]
-        public void CreateHumanEntity()
+        [HideInInspector]
+        public int HumanHealthPoints = default;
+
+        //[ContextMenu("Create Human Entity")]
+        public void CreateHumanEntity(Transform spawnPoint, bool useRegisteredHealthPoints = false)
         {
             if (_entity != null)
                 DestroyEntity();
 
-            LevelManager levelManager = LevelManager.Instance;
-
-            _entity = Instantiate(_humanPrefab, levelManager.HumanSpawnPoint.position, levelManager.HumanSpawnPoint.rotation, transform);
-            _entity.Initialize(this);
+            _entity = Instantiate(_humanPrefab, spawnPoint.position, spawnPoint.rotation, transform);
+            _entity.Initialize(this, useRegisteredHealthPoints);
         }
 
-        [ContextMenu("Create Boss Entity")]
-        public void CreateBossEntity()
+        //[ContextMenu("Create Boss Entity")]
+        public void CreateBossEntity(Transform spawnPoint)
         {
 			if (_entity != null)
 				DestroyEntity();
 
-			LevelManager levelManager = LevelManager.Instance;
-
-			_entity = Instantiate(_bossPrefab, levelManager.BossSpawnPoint.position, levelManager.BossSpawnPoint.rotation, transform);
+			_entity = Instantiate(_bossPrefab, spawnPoint.position, spawnPoint.rotation, transform);
 			_entity.Initialize(this);
 		}
 
         public void DestroyEntity()
         {
+            _entity.Kill();
             Destroy(_entity.gameObject);
         }
     }

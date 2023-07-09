@@ -17,7 +17,13 @@ namespace Runtime.HealthSystem
 
         public void Initialize(Action onDeath)
         {
+            Initialize(onDeath, _maxHealthPoints);
+        }
 
+        public void Initialize(Action onDeath, int currentHealthPoints)
+        {
+            _onDeath = onDeath;
+            _currentHealthPoints = currentHealthPoints;
         }
 
         public void TakeDamage(int amount)

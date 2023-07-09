@@ -26,6 +26,11 @@ namespace Runtime.Entities.Components
 			_entity.Owner.InputManager.OnAimInputChanged += Aim;
 		}
 
+		public void Kill()
+		{
+			_entity.Owner.InputManager.OnAimInputChanged -= Aim;
+		}
+
 		public void SetWeapon(WeaponSO weapon)
 		{
 			if (_currentWeapon != null)
