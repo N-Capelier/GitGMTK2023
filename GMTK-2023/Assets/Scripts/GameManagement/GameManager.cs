@@ -26,25 +26,19 @@ namespace Runtime.GameManagement
 
 		public event Action<int> OnPlayerJoinedWithInput;
 
-		private void Start()
-		{
-			_playerInputManager.onPlayerJoined += OnPlayerJoined;
-		}
-
-		private void OnPlayerJoined(PlayerInput obj)
+		public void RegisterPlayer(PlayerInstance player)
 		{
 			if(_player1 == null)
 			{
+				_player1 = player;
 				OnPlayerJoinedWithInput?.Invoke(0);
-				_player1 = obj.GetComponent<PlayerInstance>();
 			}
 			else
 			{
+				_player2 = player;
 				OnPlayerJoinedWithInput?.Invoke(1);
-				_player2 = obj.GetComponent<PlayerInstance>();
+				IsLobbyReady = true;
 			}
-
-			IsLobbyReady = true;
 		}
 
 		public void StartGame()

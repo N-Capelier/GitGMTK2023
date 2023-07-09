@@ -10,5 +10,10 @@ namespace Runtime.LevelManagement
 		[Space]
         public Transform HumanSpawnPoint = null;
         public Transform BossSpawnPoint = null;
-    }
+
+		private void Awake()
+		{
+            CreateSingleton();
+		}
+	}
 }
