@@ -23,6 +23,11 @@ namespace Runtime.Entities.Components
 			_entity.Owner.InputManager.OnMovementInputChanged += OnMovementInputChanged;
 		}
 
+		public void Kill()
+		{
+			_entity.Owner.InputManager.OnMovementInputChanged -= OnMovementInputChanged;
+		}
+
 		private void OnDestroy()
 		{
 			_entity.Owner.InputManager.OnMovementInputChanged -= OnMovementInputChanged;

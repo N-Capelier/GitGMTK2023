@@ -27,6 +27,11 @@ namespace Runtime.Entities.Components
 			_entity.Owner.InputManager.OnInteract += Interact;
 		}
 
+		public void Kill()
+		{
+			_entity.Owner.InputManager.OnInteract -= Interact;
+		}
+
 		private void Interact()
 		{
 			if (Physics.Raycast(_entity.transform.position, -_entity.transform.up, out RaycastHit hitInfo, 10f, _entityLayerMask))

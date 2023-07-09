@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333533ae3d7c9254abf672fbdd8bd513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerInputManager: {fileID: 5085894682123280678}
+  IsLobbyReady: 0
 --- !u!114 &5085894682123280678
 MonoBehaviour:
   m_ObjectHideFlags: 0
