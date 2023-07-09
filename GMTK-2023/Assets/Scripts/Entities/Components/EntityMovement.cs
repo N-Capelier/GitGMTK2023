@@ -16,6 +16,8 @@ namespace Runtime.Entities.Components
 		[SerializeField]
 		private Rigidbody _rigidbody;
 
+
+
 		public void Initialize(Entity entity)
 		{
 			_entity = entity;
@@ -33,10 +35,14 @@ namespace Runtime.Entities.Components
 			_entity.Owner.InputManager.OnMovementInputChanged -= OnMovementInputChanged;
 		}
 
-		private void OnMovementInputChanged(Vector2 input)
+        private void OnMovementInputChanged(Vector2 input)
 		{
 			//_rigidbody.AddForce(new Vector3(input.x, 0f, input.y) * _moveSpeed, ForceMode.VelocityChange);
-			transform.Translate(new Vector3(input.x, 0f, input.y) * _moveSpeed);
+
+			if (input.magnitude != 0)
+            {
+				transform.Translate(new Vector3(input.x, 0f, input.y) * _moveSpeed);
+			}
 		}
 	}
 }

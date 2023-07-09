@@ -34,7 +34,8 @@ namespace Runtime.UI
 			else
 			{
 				_player2JoinTMP.text = "Player 2\nReady!";
-				_startButton.gameObject.SetActive(true);
+				//_startButton.gameObject.SetActive(true);
+				OnStartGameButtonPressed();
 			}
 		}
 

@@ -3,7 +3,14 @@ guid: 8d91cc59845e1994e83bff90fcbd5769
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Owner: {instanceID: 0}
+  - Movement: {instanceID: 0}
+  - Aim: {instanceID: 0}
+  - Interaction: {instanceID: 0}
+  - HealthBar: {instanceID: 0}
+  - _particule_walkDust: {fileID: 9008742155101702516, guid: 09538ea32d836394080b2a2a56dc43a7,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
