@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92714db2d7b1bb4a8b5e1853d125715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealthPoints: 10
+  _maxHealthPoints: 15
 --- !u!1 &831133855220250740
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa610fe7d4cdbf43929bee9e3af93de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 5
+  _moveSpeed: 150
   _rigidbody: {fileID: 1239583623004960049}
 --- !u!54 &1239583623004960049
 Rigidbody:
