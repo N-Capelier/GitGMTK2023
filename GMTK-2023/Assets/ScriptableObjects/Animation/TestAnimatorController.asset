@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cbf721479419634cabca4f331580c0f, type: 3}
+  m_Name: TestAnimatorController
+  m_EditorClassIdentifier: 
+  Animations:
+  - Name: Idle
+    Sprites:
+    - {fileID: 21300000, guid: 26cf3e5139008684aa06508c676d5571, type: 3}
+    FrameRate: 1
+  - Name: Move
+    Sprites:
+    - {fileID: 21300000, guid: 2ee5cefc3cb639244989985367d12730, type: 3}
+    - {fileID: 21300000, guid: 4a608b9ff7e989242afba1876e7d56cf, type: 3}
+    FrameRate: 2
