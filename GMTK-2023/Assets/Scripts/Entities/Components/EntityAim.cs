@@ -52,6 +52,9 @@ namespace Runtime.Entities.Components
 				_canShoot = false;
 				_weaponCooldownTimer.SetTime(_currentWeapon.Cooldown, () => _canShoot = true);
 				ShootWithWeapon(_currentWeapon, input);
+				_currentWeapon.Amunition--;
+				if (_currentWeapon.Amunition <= 0)
+					Destroy(_currentWeapon);
 			}
 			else if (_defaultWeapon != null)
 			{
@@ -63,7 +66,7 @@ namespace Runtime.Entities.Components
 
 		private void ShootWithWeapon(WeaponSO weapon, Vector2 direction)
 		{
-			weapon.Shoot(transform.position, direction);
+			weapon.Cast(transform.position, direction);
 		}
 	}
 }

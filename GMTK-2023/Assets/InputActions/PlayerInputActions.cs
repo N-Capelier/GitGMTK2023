@@ -34,7 +34,7 @@ namespace Runtime.Inputs
                     ""type"": ""Value"",
                     ""id"": ""66f31c9f-4eed-4ea9-a611-6a9a12bc7abc"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },

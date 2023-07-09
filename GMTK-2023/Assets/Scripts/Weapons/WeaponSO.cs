@@ -5,8 +5,13 @@ namespace Runtime.Weapons
     //[CreateAssetMenu(fileName = "Weapon", menuName = "ScriptableObjects/Weapons", order = 50)]
     public abstract class WeaponSO : ScriptableObject
     {
-        public float Damages;
+        public int Damages;
         public float Cooldown;
-        public abstract void Shoot(Vector3 origin, Vector2 direction);
+        public float MoveSpeed;
+        public string CastSound;
+        public int Amunition;
+        public Sprite Display;
+
+        public abstract void Cast(Vector3 origin, Vector2 direction);
     }
 }

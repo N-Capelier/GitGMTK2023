@@ -38,6 +38,7 @@ namespace Runtime.GameManagement
 				_player2 = player;
 				OnPlayerJoinedWithInput?.Invoke(1);
 				IsLobbyReady = true;
+				_playerInputManager.DisableJoining();
 			}
 		}
 

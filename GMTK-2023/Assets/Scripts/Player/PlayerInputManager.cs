@@ -50,11 +50,12 @@ namespace Runtime.Player
 		{
 			_currentMovementInput = _movementAction.ReadValue<Vector2>();
 
-			if (_currentMovementInput == _lastMovementInput)
-				return;
+			//if (_currentMovementInput == _lastMovementInput)
+			//	return;
 
 			_lastAimInput = _currentMovementInput;
-			OnMovementInputChanged?.Invoke(_currentMovementInput.normalized * Time.fixedDeltaTime);
+
+			OnMovementInputChanged?.Invoke(_currentMovementInput);
 		}
 
 		private void UpdateAimInput()

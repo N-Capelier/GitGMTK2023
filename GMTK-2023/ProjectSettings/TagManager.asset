@@ -21,8 +21,8 @@ TagManager:
   - BossItem
   - Destroyable
   - Wall
-  - 
-  - 
+  - HumanBullet
+  - BossBullet
   - 
   - 
   - 
