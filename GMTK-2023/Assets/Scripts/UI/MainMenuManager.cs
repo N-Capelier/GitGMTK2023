@@ -18,7 +18,7 @@ namespace Runtime.UI
         [SerializeField]
         private TextMeshProUGUI _player2JoinTMP = null;
 		[SerializeField]
-		Button _startButton = null;
+		private TextMeshProUGUI _lobbyStateTMP = null;
 
 		private void Start()
 		{
@@ -34,12 +34,12 @@ namespace Runtime.UI
 			else
 			{
 				_player2JoinTMP.text = "Player 2\nReady!";
-				//_startButton.gameObject.SetActive(true);
-				OnStartGameButtonPressed();
+				_lobbyStateTMP.text = "Game will start soon...";
+				new CountdownTimer().SetTime(3f, StartGame);
 			}
 		}
 
-		public void OnStartGameButtonPressed()
+		private void StartGame()
 		{
 			_mainMenuCanvas.gameObject.SetActive(false);
 			GameManager.Instance.StartGame();

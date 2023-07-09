@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6811071331994505691}
   - component: {fileID: -7986519141367304076}
+  - component: {fileID: 4643303675288096066}
   m_Layer: 0
   m_Name: Human
   m_TagString: Untagged
@@ -49,8 +50,21 @@ MonoBehaviour:
   Movement: {fileID: 5879958235341282647}
   Aim: {fileID: 2397273153460147974}
   Interaction: {fileID: 8815149967582426810}
-  HealthBar: {fileID: 0}
+  HealthBar: {fileID: 4643303675288096066}
   _particule_walkDust: {fileID: 2478918317239370988}
+--- !u!114 &4643303675288096066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4955067160578326433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92714db2d7b1bb4a8b5e1853d125715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealthPoints: 10
 --- !u!1 &7220667604404130658
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!1001 &4826385318072592791
 PrefabInstance:
   m_ObjectHideFlags: 0

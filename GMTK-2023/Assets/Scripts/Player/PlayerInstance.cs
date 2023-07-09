@@ -1,4 +1,5 @@
 using Runtime.Entities;
+using Runtime.GameManagement;
 using UnityEngine;
 
 namespace Runtime.Player
@@ -21,8 +22,13 @@ namespace Runtime.Player
         [HideInInspector]
         public int HumanHealthPoints = default;
 
-        //[ContextMenu("Create Human Entity")]
-        public void CreateHumanEntity(Transform spawnPoint, bool useRegisteredHealthPoints = false)
+		private void Start()
+		{
+			GameManager.Instance.RegisterPlayer(this);
+		}
+
+		//[ContextMenu("Create Human Entity")]
+		public void CreateHumanEntity(Transform spawnPoint, bool useRegisteredHealthPoints = false)
         {
             if (_entity != null)
                 DestroyEntity();
